@@ -1,0 +1,80 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Place Order
+link(rel='preconnect' href='https://fonts.gstatic.com')
+link(rel='stylesheet' href='../static/styles.css')
+link(href='https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap' rel='stylesheet')
+style.
+  .login {
+  width: 30%;
+  margin: auto;
+  border-radius: 30px;
+  height: 399px;
+  text-align: center;
+  padding: 7px;
+  font-size: 49px;
+  padding-bottom: 30px;
+  font-weight: bold;
+  right: 680px;
+  background-image: linear-gradient(rgb(25, 216, 175), rgb(68, 66, 66));
+  }
+  button {
+  border-radius: 30px;
+  background: none;
+  background-color: rgb(38, 136, 115);
+  font-size: 31px;
+  font-family: 'Shadows Into Light', cursive;
+  cursor: pointer;
+  padding: 0px;
+  width: 30%;
+  font-weight: bold;
+  }
+script.
+  function checkPassword(form) {
+  password = form.password.value;
+  password2 = form.password2.value;
+  if (password == '')
+  alert ("Please enter Password");
+  else if (password2 == '')
+  alert ("Please enter confirm password");
+  else if (password != password2) {
+  alert ("\\nPassword did not match: Please try again...")
+  return false;
+  }
+  else{
+  return true;
+  }
+  }
+header
+  .left
+    img(src='../static/bg1.jpg' alt='')
+    div Food Point
+  .right
+    nav.navbar
+      ul
+        li
+          a(href='/') Home
+        li
+          a(href='/contactus') Contact Us
+.login
+  div(style='text-decoration: underline;')  SIGNUP
+  form(method='post' onsubmit='return checkPassword(this)')
+    label(for='name') Name
+    input(autocomplete='off' type='text' name='name')
+    br
+    br
+    label(for='password1') Password
+    input(autocomplete='off' type='password' name='password')
+    br
+    br
+    label(for='password2') Confirm Password
+    input(autocomplete='off' type='password' name='password2')
+    br
+    br
+    button(type='submit') Signup
+footer
+  div(style='color: rgb(25, 216, 175) ; text-align: center; padding: 15px;')
+    | All rights reserved @ Food Point

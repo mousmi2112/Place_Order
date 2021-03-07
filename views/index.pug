@@ -1,0 +1,51 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Place Order
+  
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(rel='stylesheet' href='../static/styles.css')
+  link(href='https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap' rel='stylesheet')
+header
+  .left
+    img(src='../static/bg1.jpg' alt='')
+    div Food Point
+  .right
+    nav.navbar
+      ul
+        li
+          a(href='/') Home
+        li
+          a(href='/contactus') Contact Us
+.main
+  .login
+    | LOGIN / 
+    a(href='/signup' style='color: black;')  SIGNUP
+    form( method='post' )
+      label(for='name') Name
+      input(autocomplete='off' type='text' name='name')
+      br
+      br
+      label(for='password') Password
+      input(autocomplete='off' type='password' name='password' id='')
+      br
+      br
+      button Login
+.cards
+  .cardsone
+    h2 Snacks
+    h3 Timing: 9am to 11am
+    img(src='../static/1.png' alt='')
+  .cardstwo
+    h2 Lunch/Dinner
+    h3 Timing: 12pm to 3pm
+    img(src='../static/2.png' alt='')
+  .cardsthree
+    h2 Drinks
+    h3 Timing: 10am to 10pm
+    img(src='../static/3.png' alt='')
+footer
+  div(style='color: rgb(25, 216, 175) ; text-align: center; padding: 15px;')
+    | All rights reserved @ Food Point
